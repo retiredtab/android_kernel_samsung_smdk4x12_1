@@ -367,7 +367,6 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
-		   -Werror-implicit-function-declaration \
 		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
 		   -mtune=cortex-a9 \
@@ -568,7 +567,7 @@ KBUILD_CFLAGS	+= -O2
 endif
 
 ifdef CONFIG_CC_CHECK_WARNING_STRICTLY
-KBUILD_CFLAGS	+= -fdiagnostics-show-option -Werror \
+KBUILD_CFLAGS	+= -fdiagnostics-show-option \
 		   -Wno-unused
 endif
 
